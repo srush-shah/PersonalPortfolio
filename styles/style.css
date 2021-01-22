@@ -1,0 +1,414 @@
+/*
+Universal Styling and Prefixing
+*/
+* {
+  max-width: 1500px;
+  font-size: 10px;
+  font-weight: 400;
+  text-decoration: none;
+  color: black;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  margin: auto;
+  border: none;
+  padding: 0;
+  background: none;
+  text-align: center;
+}
+/*
+Common Styling for the whole page
+*/
+body {
+  width: 100%;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-stretch: wider;
+}
+
+h1 {
+  font-size: 10vh;
+  font-variant: small-caps;
+  font-family: "Merriweather", serif;
+  margin-bottom: 20px;
+  line-height: 1em;
+}
+
+h2 {
+  font-size: 8vh;
+}
+
+h3 {
+  font-size: 8vh;
+}
+
+h4 {
+  font-size: 6vh;
+  line-height: 1em;
+}
+
+h5 {
+  font-size: 5vh;
+}
+
+h6 {
+  font-size: 3vh;
+}
+
+p,
+a,
+li,
+button {
+  font-size: 3vh;
+}
+
+li {
+  list-style: none;
+}
+/*
+Header Styling
+*/
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100px;
+  padding: 10px;
+  background-color: #c2c094;
+  z-index: 2;
+  display: flex;
+}
+
+header > nav {
+  margin-right: 0;
+}
+
+header > nav > ul {
+  display: flex;
+  padding: 30px;
+  justify-content: space-evenly;
+}
+
+header li {
+  margin: 5px;
+}
+
+@media screen and (min-width: 768px) {
+  header li {
+    font-size: 3.5vh;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  header li {
+    font-size: 3vh;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  header {
+    padding: 0%;
+  }
+  header > nav {
+    margin: auto;
+    padding: 0%;
+  }
+  header > nav > ul {
+    padding: 0%;
+    flex-direction: column;
+  }
+  header li {
+    font-size: 2.5vh;
+  }
+}
+/* Main Styling */
+main {
+  position: relative;
+  margin-top: 100px;
+}
+/*
+Welcome Section Styling
+*/
+#welcome-section {
+  height: 88.8vh;
+}
+
+#welcome-bg-img {
+  background: url(https://cdn.hipwallpaper.com/i/65/22/g876Ek.jpg);
+  /* Add the blur effect */
+  filter: blur(3px);
+  -webkit-filter: blur(3xpx);
+
+  /* Full height */
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#welcome-text {
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.7); /* Black w/opacity/see-through */
+  color: white;
+  font-weight: bold;
+  position: relative;
+  top: -50%;
+  left: 40%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  width: 80%;
+  padding: 20px;
+  text-align: center;
+}
+
+#welcome-text h1,
+#welcome-text h4,
+#welcome-text p {
+  color: antiquewhite;
+  font-weight: 500;
+}
+
+#welcome-text h4,
+#welcome-text p {
+  color: antiquewhite;
+  font-weight: 800;
+}
+
+#welcome-details p {
+  color: antiquewhite;
+}
+
+@media screen and (max-width: 1024px) {
+  #welcome-section {
+    height: 85.8vh;
+  }
+
+  #welcome-text {
+    width: 70%;
+    left: 35%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #welcome-section {
+    height: 85.8vh;
+  }
+
+  #welcome-text {
+    width: 70%;
+    left: 35%;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  #welcome-section {
+    height: 85.8vh;
+  }
+
+  #welcome-text {
+    top: -50%;
+  }
+
+  #welcome-text h1 {
+    font-size: 6vh;
+  }
+
+  #welcome-text h4 {
+    font-size: 4vh;
+  }
+
+  #welcome-text p {
+    font-size: 2.5vh;
+  }
+}
+/*
+Projects Section Styling
+*/
+#projects {
+  width: 100%;
+  background-color: #390040;
+}
+
+#projects h3,
+#projects p,
+#projects a {
+  color: white;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-weight: 600;
+}
+
+#project-title {
+  padding: 8%;
+  text-transform: uppercase;
+}
+
+#project-info {
+  padding: 5%;
+}
+
+#project-info p {
+  font-size: 4vh;
+  margin-bottom: 5%;
+}
+
+.project-link {
+  width: 90%;
+  padding-bottom: 2.5%;
+  background-color: #a9a587;
+  margin: 5% auto;
+  border-radius: 5px;
+}
+
+.project-tile {
+  width: 100%;
+  border-radius: 5px;
+}
+
+.project-tile-name {
+  padding-top: 4%;
+  font-size: 4vh;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+#profile-link {
+  padding: 2% 3%;
+  background-color: teal;
+  border-radius: 25px;
+}
+#profile-link:hover {
+  background-color: rgb(62, 114, 114);
+  box-shadow: rgba(0, 0, 0, 1) 4px 5px;
+  transition: box-shadow 1s, background-color 0.3s;
+}
+.profile-link {
+  margin: 10% auto;
+}
+/*
+Contact Section Styling
+*/
+#contact {
+  width: 100%;
+  padding: 10% 5%;
+  background-color: #25291c;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+#contact h3 {
+  font-size: 7vh;
+  color: rgb(223, 210, 193);
+  font-weight: 400;
+}
+
+#contact p {
+  margin: 10% auto;
+  color: rgb(229, 196, 151);
+}
+
+#contact ul {
+  width: 100%;
+  margin: 15% auto;
+  margin-bottom: 10%;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+#contact a {
+  display: inline-flex;
+  background-color: darkslategrey;
+  margin: 1%;
+  padding: 1%;
+  border-radius: 5px;
+}
+
+#contact li {
+  color: rgb(189, 228, 184);
+}
+
+#contact a:hover {
+  background-color: rgb(39, 63, 63);
+  box-shadow: darkslategrey 2px 2px;
+  transition: box-shadow 0.8s, background-color 0.3s;
+}
+/*
+Footer Styling
+*/
+
+footer {
+  width: 100%;
+  height: 100%;
+  background-color: #cd5334;
+  padding: 5% 1%;
+}
+
+footer p,
+footer span {
+  font-size: 2.5vh;
+  display: inline-block;
+}
+
+footer p {
+  float: left;
+}
+
+footer span {
+  float: right;
+  font-family: monospace;
+}
+
+@media screen and (max-width: 768px) {
+  footer {
+    height: 15vh;
+  }
+
+  footer p,
+  footer span {
+    font-size: 2vh;
+    display: inline-block;
+  }
+}
+
+@media screen and (max-width: 730px) {
+  footer p,
+  footer span {
+    font-size: 2.5vh;
+    display: block;
+    float: none;
+    margin-top: 1%;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  footer {
+    height: 18vh;
+  }
+
+  footer p,
+  footer span {
+    font-size: 2.5vh;
+    display: block;
+    float: none;
+    margin-top: 3%;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  footer p,
+  footer span {
+    font-size: 2.5vh;
+    display: block;
+    float: none;
+    margin-top: 4%;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  footer p,
+  footer span {
+    font-size: 2.5vh;
+    display: block;
+    float: none;
+    margin-top: 5%;
+  }
+}
